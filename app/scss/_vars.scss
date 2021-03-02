@@ -6,6 +6,14 @@ $grey: #f4f6f5;
 $orange: #ef6c00;
 $yellow: #fcb322;
 
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+  }
+  
+  @function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+  }
+
 @mixin f500 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;

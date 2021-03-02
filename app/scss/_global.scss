@@ -20,6 +20,10 @@ li {
     margin: 0;
     padding: 0;
 }
+p{
+    margin: 0;
+    padding: 0;
+}
 
 html,
 body {
@@ -167,6 +171,16 @@ body {
 .hide{
     display: none;
 }
+// <ul>
+// <li>Printing and typesetting industry</li>
+// <li>Bhen an unknown printe</li>
+// <li>Handard dummy text</li>
+// <li>Desktop publishing software</li>
+// <li>Bhen an unknown printe</li>
+// <li>Printing and typesetting industry</li>
+// <li>Bhen an unknown printe</li>
+// <li>Handard dummy text</li>
+// </ul>
 
 @media(max-width: 720px) {
     .container-fluid {

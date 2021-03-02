@@ -49,6 +49,20 @@ $(function () {
         $('.header__logo').toggleClass('hide');
     });
 
+    // $('.product-one__tabs').on('click', function(event) {
+    //     let id = $(this).attr('data-id');
+    //     $('.product-one__tabs').find('.tab-item').removeClass('active-tab').hide();
+    //     $('.product-one__tabs').find('.tab').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('#' + id).addClass('active-tab').fadeIn();
+    //     return false;
+
+    // });
+    $(".tab_item").not(":first").hide();
+    $(".product-one__tabs .tab").click(function() {
+	$(".product-one__tabs .tab").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
+	$(".tab_item").hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass("active-tab");
 
     var mixer = mixitup('.products__inner-box');
 

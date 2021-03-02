@@ -8,12 +8,12 @@ const gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 
-gulp.task('clean', async function() {
+gulp.task('clean', async function () {
     del.sync('dist');
 });
 
 
-gulp.task('scss', function() {
+gulp.task('scss', function () {
     return gulp.src('app/scss/**/*.scss')
         .pipe(sass({
             outputStyle: 'compressed'
@@ -30,11 +30,12 @@ gulp.task('scss', function() {
         }));
 });
 
-gulp.task('css', function() {
+gulp.task('css', function () {
     return gulp.src([
             'node_modules/normalize.css/normalize.css',
             'node_modules/slick-carousel/slick/slick.css',
             'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
         ])
         .pipe(concat('_libs.scss'))
         .pipe(gulp.dest('app/scss'))
@@ -43,7 +44,7 @@ gulp.task('css', function() {
         }));
 });
 
-gulp.task('html', function() {
+gulp.task('html', function () {
     return gulp.src('app/*.html')
         .pipe(browserSync.reload({
             stream: true
@@ -51,7 +52,7 @@ gulp.task('html', function() {
 });
 
 
-gulp.task('script', function() {
+gulp.task('script', function () {
     return gulp.src('app/js/*.js')
         .pipe(browserSync.reload({
             stream: true
@@ -59,11 +60,12 @@ gulp.task('script', function() {
 });
 
 
-gulp.task('js', function() {
+gulp.task('js', function () {
     return gulp.src([
             'node_modules/slick-carousel/slick/slick.js',
             'node_modules/mixitup/dist/mixitup.js',
             'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -73,7 +75,7 @@ gulp.task('js', function() {
         }));
 });
 
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function () {
     browserSync.init({
         server: {
             baseDir: "app/"
@@ -81,7 +83,7 @@ gulp.task('browserSync', function() {
     });
 });
 
-gulp.task('export', function() {
+gulp.task('export', function () {
     let buildHtml = gulp.src('app/**/*.html')
         .pipe(gulp.dest('dist'));
     let buildCss = gulp.src('app/css/**/*.css')
@@ -94,7 +96,7 @@ gulp.task('export', function() {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
     gulp.watch('app/*.html', gulp.parallel('html'));
     gulp.watch('app/js/*.js', gulp.parallel('script'));
