@@ -33,7 +33,7 @@ $(function () {
         $('.icon-th-list').removeClass('active');
     });
     const btnBurger = document.querySelector('.menu__btn'),
-          menu = document.querySelector('.menu__list');
+        menu = document.querySelector('.menu__list');
 
 
     btnBurger.addEventListener('click', () => {
@@ -43,26 +43,53 @@ $(function () {
             menu.classList.remove('menu-active');
         }
     });
-    
+
     $('.header__btn-menu').on('click', function () {
         $('.header__box').toggleClass('active');
         $('.header__logo').toggleClass('hide');
     });
 
-    // $('.product-one__tabs').on('click', function(event) {
-    //     let id = $(this).attr('data-id');
-    //     $('.product-one__tabs').find('.tab-item').removeClass('active-tab').hide();
-    //     $('.product-one__tabs').find('.tab').removeClass('active');
-    //     $(this).addClass('active');
-    //     $('#' + id).addClass('active-tab').fadeIn();
-    //     return false;
 
-    // });
     $(".tab_item").not(":first").hide();
-    $(".product-one__tabs .tab").click(function() {
-	$(".product-one__tabs .tab").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
-	$(".tab_item").hide().eq($(this).index()).fadeIn()
-}).eq(0).addClass("active-tab");
+    $(".product-one__tabs .tab").click(function () {
+        $(".product-one__tabs .tab").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
+        $(".tab_item").hide().eq($(this).index()).fadeIn();
+    }).eq(0).addClass("active-tab");
+
+    const tabs = document.querySelectorAll('.tabs'),
+          tabsParent = document.querySelector('.settings_tabs'),
+          tabsContent = document.querySelectorAll('.settings_content__item');
+    
+    function hideTabsContent() {
+        tabs.forEach(item => {
+            item.classList.remove('active');
+        });
+        tabsContent.forEach(item => {
+            item.classList.add('hide', 'fade');
+            item.classList.remove('show');
+        });
+    }
+    function showTabsContent(i = 0) {
+        tabs[i].classList.add('active');
+        tabsContent[i].classList.add('show');
+        tabsContent[i].classList.remove('hide');
+    }
+
+    hideTabsContent();
+    showTabsContent();
+
+    tabsParent.addEventListener('click', (event) => {
+        const target = event.target;
+        if(target && target.classList.contains('tabs')) {
+            tabs.forEach((item, i) => {
+                if(target == item) {
+                    hideTabsContent();
+                    showTabsContent(i);
+                }
+            });
+        }
+    });
+    
 
     var mixer = mixitup('.products__inner-box');
 
