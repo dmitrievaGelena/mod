@@ -63,6 +63,7 @@ $(function () {
     function hideTabsContent() {
         tabs.forEach(item => {
             item.classList.remove('active');
+            item.classList.remove('active-icon');
         });
         tabsContent.forEach(item => {
             item.classList.add('hide', 'fade');
@@ -71,6 +72,7 @@ $(function () {
     }
     function showTabsContent(i = 0) {
         tabs[i].classList.add('active');
+        tabs[i].classList.add('active-icon');
         tabsContent[i].classList.add('show');
         tabsContent[i].classList.remove('hide');
     }

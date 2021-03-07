@@ -1092,23 +1092,24 @@
     }
 
     .link-facebook {
-        background-position: -1px -1px;
+        background-position: 0px 0px;
     }
 
     .link-twitter {
-        background-position: -31px -1px;
+        background-position: -28px 0px;
     }
 
     .link-youtube {
-        background-position: -1px -31px;
+        background-position: 0px -28px;
+        ;
     }
 
     .link-pinretest {
-        background-position: -31px -31px;
+        background-position: -28px -28px;
     }
 
     .link-linledin {
-        background-position: -61px -1px;
+        background-position: -56px 0px;
 
     }
 
@@ -2258,7 +2259,8 @@
     //start settings
     .settings {
         margin-bottom: 140px;
-        &_tabs{
+
+        &_tabs {
             margin-right: 30px;
             max-width: 270px;
             width: 100%;
@@ -2266,7 +2268,7 @@
             border: 1px solid #d7d7d7;
             height: max-content;
 
-            .tabs{
+            .tabs {
                 padding: 17px 15px 17px 50px;
                 position: relative;
                 border-bottom: 1px solid #d7d7d7;
@@ -2275,50 +2277,61 @@
                 font-size: 14px;
                 color: #707070;
                 cursor: pointer;
-                &::before{
+
+                &::before {
                     content: '\f105';
                     font-family: 'icomoon';
                     position: absolute;
                     left: 20px;
                     color: $bg;
                 }
-                &:last-child{
+
+                &:last-child {
                     border-bottom: none;
                 }
-                &.active{
+
+                &.active {
                     border-bottom: 1px solid $green;
                     color: $bg;
                 }
             }
         }
-        &_content{
+
+        &_content {
             width: 100%;
         }
     }
-    .settings__content{
+
+    .settings__content {
         display: flex;
     }
-    .form__select{
+
+    .form__select {
         max-width: 540px;
         width: 100%;
     }
-    .settings-content__info{
+
+    .settings-content__info {
         position: relative;
         background-color: #fff;
         padding: 30px 30px 80px;
-        form{
+
+        form {
             align-items: center;
             display: flex;
             justify-content: space-between;
-            & + form {
+
+            &+form {
                 margin-top: 20px;
             }
-            label{
+
+            label {
                 color: #444444;
                 @include f500;
             }
+
             input,
-            select{
+            select {
                 max-width: 540px;
                 width: 100%;
                 outline: none;
@@ -2329,12 +2342,14 @@
             }
         }
     }
-    select{
-        option{
+
+    select {
+        option {
             color: #707070;
         }
     }
-    .settings-content__btn{
+
+    .settings-content__btn {
         margin-top: 20px;
         position: relative;
         max-width: 540px;
@@ -2343,18 +2358,290 @@
         -moz-transform: translateX(50%);
         -ms-transform: translateX(50%);
         -o-transform: translateX(50%);
-        a{
+
+        a {
             background-color: $green;
             @include f500;
             color: #ffff;
             padding: 15px 30px;
         }
-}
-   
-    
-    
+    }
 
     //end settings
+
+    //start profile
+    .profile {
+        &__inner {
+            display: flex;
+        }
+
+        &__aside {
+            margin-right: 30px;
+            max-width: 270px;
+            width: 100%;
+        }
+
+        &__social-link {
+            margin-bottom: 25px;
+        }
+
+        &-item {
+            margin-bottom: 25px;
+        }
+
+        &__content {
+            width: 100%;
+        }
+    }
+
+    .profile-status {
+        border: 1px solid #d3d3d3;
+        text-align: center;
+        color: #70838d;
+        font-size: 13px;
+        padding: 6px 9px 5px 30px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            width: 9px;
+            height: 9px;
+            top: 12px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+    }
+
+    .profile-on {
+        &::before {
+            background-color: $green;
+        }
+
+    }
+
+    .profile-off {
+        &::before {
+            background-color: $red;
+        }
+
+    }
+
+    .profile__aside-btn {
+        margin-bottom: 30px;
+
+        a {
+            display: block;
+            font-size: 16px;
+            color: #fff;
+            padding: 18px 10px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+
+            &+a {
+                margin-top: 17px;
+            }
+        }
+    }
+
+    .profile__aside-message {
+        background-color: $text;
+        @include f500;
+        position: relative;
+
+        &::before {
+            content: "\f003";
+            position: absolute;
+            font-family: 'icomoon';
+            left: 60px;
+        }
+    }
+
+    .profile__aside-follow {
+        background-color: $green;
+        @include f700;
+
+    }
+
+    .profile__banner {
+        padding: 17px;
+        border: 1px solid #dfdfdf;
+        background-color: #fff;
+
+        &-images {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 330px;
+        }
+    }
+
+    .profile__items {
+        margin: 30px 0;
+        background-color: #fff;
+        display: flex;
+        border: 1px solid #dfdfdf;
+    }
+
+    .profile__item {
+        width: 25%;
+        text-align: center;
+        padding: 20px 10px 17px;
+        height: 80px;
+
+        &+& {
+            border-left: 1px solid #dfdfdf;
+        }
+
+        &-title {
+            font-size: 14px;
+            color: $bg;
+            @include f500;
+        }
+
+        &-content {
+            color: #707070;
+            font-size: 14px;
+        }
+
+        span {
+            color: $bg;
+        }
+
+        .rate-star {
+            margin-right: 5px;
+        }
+
+        &-sales {
+            color: $bg;
+        }
+    }
+
+    .profile__tabs {
+        display: flex;
+        margin-bottom: 110px;
+    }
+
+    .settings_tabs__profile {
+        .tabs {
+            &::before {
+                color: #d0d0d0;
+            }
+        }
+
+        .tabs-about {
+            &::before {
+                content: '\f007';
+            }
+        }
+
+        .tabs-products {
+            &::before {
+                content: '\f0f2';
+            }
+        }
+
+        .tabs-message {
+            &::before {
+                content: '\f003';
+            }
+        }
+
+        .tabs-custom {
+            &::before {
+                content: '\f0e6';
+            }
+        }
+
+        .tabs-follow {
+            &::before {
+                content: '\f0c0';
+            }
+        }
+    }
+
+    .active-icon.tabs {
+        &::before {
+            color: $green;
+        }
+    }
+
+    .profile_content__item {
+        background-color: #fff;
+        padding: 35px 40px 25px;
+        border: 1px solid #dcdcdc;
+    }
+
+    .profile_content-titel {
+        margin-bottom: 30px;
+    }
+
+    .profile_title {
+        font-size: 20px;
+        color: $bg;
+        @include f700;
+    }
+
+    .profile_content-text {
+        color: #707070;
+        margin-bottom: 40px;
+    }
+
+    .profile_content-items-titel {
+        margin-bottom: 25px;
+    }
+
+    .profile_content-item {
+        font-size: 16px;
+        color: $bg;
+
+        &__head {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        &__name {
+            @include f500;
+            font-style: italic;
+        }
+
+        &__percent {
+            @include f700;
+        }
+
+        &__line {
+            width: 100%;
+            height: 15px;
+            background-color: #f4f4f4;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+            margin-bottom: 23px;
+
+            span {
+                display: block;
+                height: 15px;
+                background-image: url(../img/content/skillsbar.jpg);
+                background-repeat: repeat;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+            }
+        }
+    }
+
+
+    //end profile
 
 
     @import 'media';
