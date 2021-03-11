@@ -1,4 +1,5 @@
 $(function () {
+    $('input[type="file"], select').styler();
 
     $(".rate-star").rateYo({
         rating: 3.5,
@@ -91,6 +92,7 @@ $(function () {
             });
         }
     });
+
     
 
     var mixer = mixitup('.products__inner-box');
