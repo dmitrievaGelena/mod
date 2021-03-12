@@ -1,3 +1,35 @@
+@media(max-width: 1200px) {
+    .withdrawals {
+        &__inner {
+            display: block;
+        }
+
+        &__col {
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+
+        &__content-item {
+            max-width: 490px;
+        }
+    }
+
+    .settings-content__btn {
+        max-width: 100%;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        text-align: center;
+
+        a {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
 @media (max-width: 1150px) {
     .footer__inner {
         flex-wrap: wrap;
@@ -16,6 +48,79 @@
     .header__text {
         display: none;
     }
+
+}
+
+@media(max-width: 1080px) {
+    .settings__content {
+        display: block;
+    }
+
+    .settings_tabs {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .contacts__box {
+        display: block;
+    }
+
+    .contacts__form {
+        width: 100%;
+    }
+
+    .contacts__form-row {
+        input {
+
+            width: 50%;
+
+            &+input {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .contacts__form-title {
+        margin-bottom: 30px;
+    }
+
+    .contacts__form {
+        button {
+            width: 100%;
+        }
+    }
+
+    .profile__tabs {
+        display: block;
+    }
+}
+
+@media(max-width: 960px) {
+    .page-404__err {
+        &::after {
+            content: none;
+        }
+    }
+
+    .profile__inner {
+        flex-direction: column;
+    }
+
+    .profile__content {
+        order: -1;
+    }
+
+    .profile__aside {
+        max-width: 100%;
+    }
+
+    .profile-item {
+        width: 100%;
+    }
+
+    .profile__aside-btn {
+        width: 300px;
+    }
 }
 
 @media (max-width: 840px) {
@@ -32,7 +137,7 @@
     }
 
     .menu__list {
-        z-index: 1; 
+        z-index: 1;
         position: absolute;
         border-radius: 0 0 10px 0;
         -webkit-border-radius: 0 0 10px 0;
@@ -127,6 +232,45 @@
         -ms-transition: all .5s;
         -o-transition: all .5s;
     }
+
+    .upload__line {
+        display: block;
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+
+    .upload__inner {
+        margin-bottom: 80px;
+
+        button {
+            margin-left: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    .settings-content__info {
+        form {
+            display: block;
+
+            input {
+                max-width: 100%;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 15px;
+            }
+
+            .form__select {
+                max-width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 760px) {
@@ -151,6 +295,10 @@
 
     .message__box {
         display: none;
+    }
+
+    .page-404__err {
+        font-size: 200px;
     }
 }
 
@@ -215,10 +363,60 @@
     .user__menu {
         top: 62px;
     }
-    .circle__menu{
+
+    .circle__menu {
         right: auto;
         left: -20px;
         top: 56px;
+    }
+
+    .page-404__title {
+        line-height: 40px;
+    }
+
+    .page-404__title,
+    .page-404__text {
+        padding: 0 15px;
+    }
+
+    .contacts__map {
+        height: 300px;
+    }
+
+    .contacts__inner {
+        padding: 20px 25px 15px;
+    }
+
+    .contacts__form-row {
+        display: block;
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .contacts__form-row input+input {
+        margin-left: 0px;
+    }
+
+    .profile__banner-images {
+        min-height: 240px;
+    }
+
+    .profile__items {
+        display: block;
+        text-align: center;
+    }
+
+    .profile__item {
+        width: 100%;
+    }
+
+    .profile__item+.profile__item {
+        border-left: none;
+        border-top: 1px solid #dfdfdf;
     }
 }
 
@@ -275,6 +473,111 @@
         margin-bottom: 15px;
     }
 
+    .withdrawals {
+        &__content {
+            padding-right: 10px;
+            padding-left: 10px;
+
+            &-item {
+                min-width: 490px;
+            }
+
+            &-items {
+                overflow-x: scroll;
+            }
+        }
+
+        &__inner {
+            margin-bottom: 60px;
+        }
+    }
+
+    .page-404__err {
+        font-size: 150px;
+        line-height: 200px;
+        padding-top: 10px;
+    }
+
+    .page-404 {
+        margin-bottom: 80px;
+    }
+
+    .about__inner {
+        padding: 30px 35px 30px 35px;
+    }
+
+    .about__head {
+        font-size: 20px;
+    }
+
+    .about {
+        margin-bottom: 80px;
+    }
+
+    .upload__inner-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .upload__inner-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .settings {
+        margin-bottom: 80px;
+    }
+
+    .settings-content__head {
+        font-size: 20px;
+    }
+
+    .contacts__info-title {
+        padding-bottom: 10px;
+        padding-left: 30px;
+
+        &::before {
+            font-size: 20px;
+        }
+    }
+
+    .contacts__info-content {
+        margin-top: 20px;
+    }
+
+    .contacts__info-item {
+        margin-bottom: 20px;
+    }
+
+    .contacts__head,
+    .contacts__form-title {
+        font-size: 20px;
+    }
+
+    .contacts {
+        margin-bottom: 80px;
+    }
+
+    .profile_content__item {
+        padding: 20px 20px 20px;
+    }
+
+    .profile__tabs {
+        margin-bottom: 80px;
+    }
+
+    .profile__aside-btn {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .footer__social-link {
+        text-align: center;
+
+        li+li {
+            margin-left: 10px;
+        }
+    }
 }
 
 @media (max-width: 450px) {
@@ -285,9 +588,24 @@
     .user__images {
         margin-right: 0;
     }
-    .circle__menu{
+
+    .circle__menu {
         right: auto;
         left: -50px;
+    }
+
+    .page-404__title {
+        font-size: 20px;
+    }
+
+    .page-404__text {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .page-404__link {
+        margin-bottom: 50px;
+        padding: 15px 25px 15px;
     }
 }
 
@@ -303,14 +621,96 @@
     .bascket__box {
         margin-left: 0;
     }
-    .bascket__box{
+
+    .bascket__box {
         margin-right: 20px;
     }
 
     .header__btn-logout {
         margin-left: 0;
     }
-    .header__btn{
+
+    .header__btn {
         width: 60px;
+    }
+
+    .withdrawals {
+        &__title {
+            font-size: 20px;
+            padding: 15px 15px 15px 10px;
+            margin-bottom: 20px;
+        }
+
+        &__form-line {
+            label {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+
+            input,
+            select {
+                height: 35px;
+                padding: 0px 13px;
+                font-size: 13px;
+            }
+
+            .jq-selectbox__select-text {
+                font-size: 13px;
+            }
+        }
+
+        &__content {
+            button {
+                padding: 15px 25px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .page-404__err {
+        font-size: 100px;
+        line-height: 120px;
+    }
+
+    .jq-selectbox__select-text {
+        font-size: 13px;
+    }
+
+    .upload__line {
+
+        input,
+        textarea {
+            font-size: 13px;
+        }
+
+        label {
+            font-size: 13px;
+        }
+    }
+
+    .contacts__form-row {
+        input {
+            padding-left: 10px;
+        }
+    }
+
+    .contacts__form {
+        textarea {
+            padding: 15px 15px 15px 10px;
+        }
+    }
+
+    .contacts__inner {
+        padding: 10px 10px 10px;
+    }
+
+    .profile__aside-btn {
+        width: 100%;
+    }
+
+    .profile__aside-message {
+        &::before {
+            left: 70px;
+        }
     }
 }

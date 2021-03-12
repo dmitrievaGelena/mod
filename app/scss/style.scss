@@ -2237,12 +2237,15 @@
 
         input {
             width: 350px;
-            // margin-right: 25px;
             height: 43px;
             border: none;
             background-color: #f1f4f5;
             padding-left: 17px;
             outline: none;
+
+            &+input {
+                margin-left: 25px;
+            }
 
             &::placeholder {
                 color: #7a7a7a;
@@ -2309,6 +2312,38 @@
     .form__select {
         max-width: 540px;
         width: 100%;
+
+        .jq-selectbox {
+            width: 100%;
+        }
+
+        .jq-selectbox__select {
+            height: 40px;
+            padding: 0 45px 0 10px;
+            border: 1px solid #dcdcdc;
+            border-bottom-color: #dcdcdc;
+            border-radius: 4px;
+            background: #f9f9f9;
+            box-shadow: none;
+            font-family: "Roboto-Regular", sans-serif;
+            color: #333;
+            text-shadow: none;
+        }
+
+        .jq-selectbox__trigger {
+            border-left: none;
+
+            &::before {
+                content: '\f0dd';
+                font-family: 'icomoon';
+                margin-left: 10px;
+            }
+
+        }
+
+        .jq-selectbox__trigger-arrow {
+            display: none;
+        }
     }
 
     .settings-content__info {
@@ -2703,6 +2738,7 @@
                 align-items: center;
                 padding: 0px 18px;
                 outline: none;
+
                 &::placeholder {
                     color: #707070;
                 }
@@ -2813,20 +2849,22 @@
     //end upload
 
     //start withdrawals
-    .withdrawals{
-        &__inner{
+    .withdrawals {
+        &__inner {
             display: flex;
             justify-content: space-between;
             margin-bottom: 110px;
         }
-        &__col{
+
+        &__col {
             max-width: 570px;
             background-color: #fff;
             width: 100%;
             border: 1px solid #dedede;
             height: 100%;
         }
-        &__title{
+
+        &__title {
             color: $bg;
             font-size: 24px;
             @include f500;
@@ -2834,10 +2872,12 @@
             border-bottom: 1px solid #dedede;
             margin-bottom: 30px;
         }
-        &__content{
+
+        &__content {
             padding-left: 35px;
             padding-right: 40px;
-            button{
+
+            button {
                 margin-bottom: 50px;
                 padding: 18px 30px;
                 background-color: $green;
@@ -2848,21 +2888,25 @@
                 cursor: pointer;
             }
         }
-        &__form-line{
+
+        &__form-line {
             margin-bottom: 25px;
-            label{
+
+            label {
                 display: block;
                 width: 100%;
                 color: $bg;
                 font-size: 16px;
                 @include f500;
                 margin-bottom: 15px;
-                span{
+
+                span {
                     color: $green;
                 }
             }
+
             input,
-            select{
+            select {
                 width: 100%;
                 display: block;
                 border: 1px solid #d7d7d7;
@@ -2871,11 +2915,13 @@
                 align-items: center;
                 padding: 0px 18px;
                 outline: none;
+
                 &::placeholder {
                     color: #707070;
                 }
 
             }
+
             .jq-selectbox {
                 width: 100%;
             }
@@ -2922,41 +2968,50 @@
             }
         }
     }
-    .withdrawals__content{
-        &-items{
+
+    .withdrawals__content {
+        &-items {
             padding-bottom: 35px;
         }
-        &-item{
+
+        &-item {
             height: 42px;
             align-items: center;
             display: flex;
             font-size: 13px;
             color: #444444;
+
             &:nth-child(odd) {
                 background-color: #f9f9f9;
             }
         }
-        &-date{
+
+        &-date {
             @include f500;
             width: 154px;
             padding-left: 20px;
         }
-        &-email{
+
+        &-email {
             width: 180px;
         }
-        &-price{
+
+        &-price {
             @include f700;
             width: 70px;
         }
-        &-status{
+
+        &-status {
             @include f700;
             width: 88px;
-            &.withdrawals__content-paid{
+
+            &.withdrawals__content-paid {
                 color: $green;
             }
 
         }
     }
+
     //end withdrawals
 
 
