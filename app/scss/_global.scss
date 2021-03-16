@@ -114,6 +114,7 @@ body {
 .breadcrumbs {
     &__inner {
         padding: 45px 0 40px;
+        overflow: hidden;
     }
 
     &__list {
@@ -186,17 +187,9 @@ body {
         opacity: 1;
     }
 }
-// <ul>
-// <li>Printing and typesetting industry</li>
-// <li>Bhen an unknown printe</li>
-// <li>Handard dummy text</li>
-// <li>Desktop publishing software</li>
-// <li>Bhen an unknown printe</li>
-// <li>Printing and typesetting industry</li>
-// <li>Bhen an unknown printe</li>
-// <li>Handard dummy text</li>
-// </ul>
-
+#modal{
+    display: none;
+}
 @media(max-width: 720px) {
     .container-fluid {
         padding: 0 15px;

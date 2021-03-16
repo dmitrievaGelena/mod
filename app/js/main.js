@@ -12,7 +12,32 @@ $(function () {
         arrows: false,
         slidesToShow: 4,
         slidesToScroll: 4,
-        dots: true
+        dots: true,
+        responsive: [
+            {
+              breakpoint: 1900,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+                breakpoint: 1440,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                }
+              },
+              {
+                breakpoint: 800,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                }
+              },
+          ]
     });
 
     $(".js-range-slider").ionRangeSlider({
@@ -56,8 +81,10 @@ $(function () {
         $(".product-one__tabs .tab").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
         $(".tab_item").hide().eq($(this).index()).fadeIn();
     }).eq(0).addClass("active-tab");
+    var mixer = mixitup('.products__inner-box');
+});
 
-    const tabs = document.querySelectorAll('.tabs'),
+const tabs = document.querySelectorAll('.tabs'),
           tabsParent = document.querySelector('.settings_tabs'),
           tabsContent = document.querySelectorAll('.settings_content__item');
     
@@ -80,6 +107,7 @@ $(function () {
 
     hideTabsContent();
     showTabsContent();
+    
 
     tabsParent.addEventListener('click', (event) => {
         const target = event.target;
@@ -92,9 +120,3 @@ $(function () {
             });
         }
     });
-
-    
-
-    var mixer = mixitup('.products__inner-box');
-
-});

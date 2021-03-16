@@ -618,6 +618,10 @@
     .products {
         padding: 110px 0;
         background-color: $grey;
+        &_wrapper{
+            max-width: 1920px;
+            margin: 0 auto;
+        }
 
         &__inner {
             &-btn {
@@ -647,8 +651,9 @@
 
             &-box {
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-start;
                 flex-wrap: wrap;
+                margin-left: -30px;
             }
         }
     }
@@ -730,6 +735,10 @@
             }
         }
     }
+    .products .product__item{
+        flex-basis: calc(25% - 30px);
+        margin-left: 30px;
+    }
 
     .avatar {
         min-width: 30px;
@@ -776,6 +785,10 @@
 
     .product-slider {
         padding: 110px 0;
+        &__wrapper{
+        max-width: 1920px;
+        margin: 0 auto;
+        }
     }
 
     //end product-slider
@@ -1363,19 +1376,21 @@
 
         .product__page-items {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-wrap: wrap;
             margin-bottom: 30px;
+            margin-left: -30px;
         }
 
         .product__items {
-            max-width: 270px;
+            flex-basis: calc(33.3333% - 30px);
             background-color: #fff;
             transition: all .3s;
             -webkit-transition: all .3s;
             -moz-transition: all .3s;
             -ms-transition: all .3s;
             -o-transition: all .3s;
+            margin-left: 30px;
 
             &:hover {
                 box-shadow: 0px 16px 20px 0px rgba(216, 216, 216, 0.75);
@@ -1482,7 +1497,7 @@
     .product__items {
         &.list {
             max-width: 100%;
-
+            flex-basis: 100%;
             .product__items-img {
                 width: 240px;
                 float: left;
@@ -1608,7 +1623,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 17px 0;
+            padding: 17px;
         }
 
         &__title {
